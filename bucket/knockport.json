@@ -1,0 +1,27 @@
+{
+    "version": "0.3.7",
+    "description": "One desktop API client for REST, GraphQL, WebSocket, SSE, Socket.IO, MQTT and gRPC — git built in, collections are plain files, no account.",
+    "homepage": "https://knockport.com",
+    "license": "FSL-1.1-ALv2",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/transmitworks/knockport-releases/releases/download/v0.3.7/KnockPort_0.3.7_x64-setup.exe#/dl.7z",
+            "hash": "3f11f648f2a6f37f30f5318bd7441c868c83b75207c44012661e2693d04ed803"
+        }
+    },
+    "shortcuts": [
+        ["KnockPort.exe", "KnockPort"]
+    ],
+    "bin": "KnockPort.exe",
+    "checkver": {
+        "url": "https://knockport.com/",
+        "regex": "KnockPort_([\\d.]+)_x64-setup\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/transmitworks/knockport-releases/releases/download/v$version/KnockPort_$version_x64-setup.exe#/dl.7z"
+            }
+        }
+    }
+}
